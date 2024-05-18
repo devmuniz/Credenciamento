@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crachá - ModalGR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logo.png">
+</head>
+<body>
+    
+    <div class="box">
+        <img src="../img/logo.png" alt="Logo da ModalGR" width="100px" class="logoCracha">
+        <h1 class="credenciado">CREDENCIADO</h1>
+        <h2>Colaborador:</h2>
+        <p id="resultado"></p>
+    </div>
+    
+    <button id="novoBtn"><i class="fa-solid fa-user-plus"></i>Criar Novo</button>
+    
+    
+    
+
+    <script>
+        // Recuperar o nome formatado do localStorage
+        let nomeFormatado = localStorage.getItem('nomeFormatado');
+
+        // Exibir o nome formatado no parágrafo com id "resultado"
+        if (nomeFormatado) {
+            document.getElementById('resultado').textContent = nomeFormatado;
+        } else {
+            document.getElementById('resultado').textContent = 'Nenhum nome formatado encontrado.';
+
+        }
+
+        function novoCracha() {
+            window.location.href = 'index.html';
+        }
+
+        document.getElementById('novoBtn').addEventListener('click', novoCracha);
+
+    </script>
+    <script src="https://kit.fontawesome.com/8f8b595eba.js" crossorigin="anonymous"></script>
+</body>
+</html>
