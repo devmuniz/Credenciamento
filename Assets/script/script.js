@@ -15,7 +15,7 @@ function formatarNome(nomeCompleto) {
     let iniciais = partesFiltradas.map(parte => parte[0].toUpperCase() + '.');
 
     //Juntar o ultimo nome com as iniciais
-    let nomeFormatado = `${ultimoSobrenome.toUpperCase()}, ${iniciais.join(" ")}`;
+    let nomeFormatado = `${ultimoSobrenome.toUpperCase()}, ${iniciais.join(" ")}`;// concateno os elementos de Iniciais separaods por espaco
 
     return nomeFormatado;
 }
